@@ -33,6 +33,7 @@
 ./ 나 앞에 기호를 생략하면 현재 위치
 ../: 상위 디레고리
 
+** 무조건 이미지와 디렉토리 파일이 같은 파일에 저장되면 안됨. 이미지를 따로 파일을 생성해 넣어줘야함(같은 곳에 있으면xx) **
 
 *현재 작업 디렉토리를 git에 저장
 =>디렉토리로 프롬프트를 이동해서 git init이라는 명령을 수행
@@ -40,5 +41,29 @@
 git 명령이 수행되지 않는 경우 git이 설치된 디렉토리의 bin이라는 디렉토리를 path라는 환경변수에 추가해주면 됩니다.
 
 =>관리할 파일을 등록
-git add. : 현재 디렉토리의 모든내용을 git이 관리하도록
+git add . : 현재 디렉토리의 모든내용을 git이 관리하도록 설정
+
+=>commit: 현재 변경 내용을 로컬(내컴퓨터)에 반영
+git commit -m "메시지..."
+git commit -m "HTML을 처음 수행"
+=>변경 내역 확인: git log
+
+*로컬 git 내용을  git hub사이트에 업로드
+=> git hub 사이트에 repository를 생성하고 url 복사
+https://github.com/Su-Min57/lgxhtml.git
+
+=>현재 git 디렉토리와 repository를 연결
+git remote add 이름 url
+
+git remote add cherry https://github.com/Su-Min57/lgxhtml.git
+
+=>코드를 업로드(push)
+git push cherry 이름 브랜치이름
+git push cherry main
+
+*코드를 수정하고 수정한 내용을 git hub에 반영
+git add .
+git commit -m "메시지"
+git push 이름 브랜치이름(브랜치 이름을 수정하면 별도의 장소에 보관)
+
 -->
